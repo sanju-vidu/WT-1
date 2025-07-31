@@ -1,0 +1,14 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df=pd.read_csv(r"C:\Users\WPT-39\Desktop\Titanic-Dataset.csv")
+Pclass=df['Pclass'].value_counts().sort_index()
+plt.figure(figsize=(8,5))
+Pclass.plot(kind='bar',color='skyblue')
+plt.title("Bar chart")
+plt.xlabel("number of class")
+plt.ylabel("number of passengers")
+plt.xticks(rotation=0)
+plt.grid(axis='x',linestyle='--',alpha=0.7)
+plt.tight_layout()
+plt.show()
